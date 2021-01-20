@@ -1,0 +1,25 @@
+{
+  "name": "mernp",
+  "version": "1.0.0",
+  "description": "mern squelette application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UsefSalim/mern_p.git"
+  },
+  "keywords": [
+    "mongoDB",
+    "React",
+    "ExpressJs",
+    "NodeJs"
+  ],
+  "author": "Salim Youssef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UsefSalim/mern_p/issues"
+  },
+  "homepage": "https://github.com/UsefSalim/mern_p#readme"
+}
