@@ -1,3 +1,4 @@
-exports.app = () => {
-  console.log('test')
-}
+const createApp = require('./server/squelette')
+
+createApp.ServerCreate();
+

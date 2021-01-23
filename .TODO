@@ -1,0 +1,3 @@
+POSTINSTALL 
+wsl install
+npx $variable
