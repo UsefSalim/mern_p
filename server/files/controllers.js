@@ -1,4 +1,4 @@
-exports.controller = ()=>{
+exports.controllers = ()=>{
   return `///* -------------------------------------------------------------------------- Item Controllers
 // -------------require models----------  //
 const Item = require('../models/Item.model')
