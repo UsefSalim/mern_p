@@ -1,8 +1,8 @@
-exports.model = ()=>{
+exports.model = (modelName)=>{
   return `const mongoose = require('mongoose');
 const Schema = mongoose.Schema
-//* create a Item Scheme
-const ItemSchema = new Schema({
+//* create a ${modelName} Scheme
+const ${modelName}Schema = new Schema({
   name: {
     type: String,
     required: true
@@ -21,5 +21,5 @@ const ItemSchema = new Schema({
   }
 })
 
-module.exports = Item = mongoose.model('Item', ItemSchema)`
+module.exports = ${modelName} = mongoose.model('${modelName}', ${modelName}Schema)`
 }

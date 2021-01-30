@@ -1,53 +1,53 @@
-exports.routes = ()=>{
+exports.routes = (modelName)=>{
    return `const router = require('express').Router()
 
 const { getAll,
-     addItem,
-     deletItem,
-     deletAllItems,
+     add${modelName},
+     delet${modelName},
+     deletAll${modelName}s,
      getOne,
-     updateItem } = require('../controllers/Item.controllers')
+     update${modelName} } = require('../controllers/${modelName}.controllers')
 
 
 
-/// * ------------------------- Item Route
+/// * ------------------------- ${modelName} Route
 
-/* ! @Route  : GET => api/item
-     Desc    : Get all Items 
+/* ! @Route  : GET => api/${modelName}
+     Desc    : Get all ${modelName}s 
      @Access : Pubic
 */
 router.get('/', getAll)
 
-/* ! @Route  : GET => api/item/:id
-     Desc    : Get One  item
+/* ! @Route  : GET => api/${modelName}/:id
+     Desc    : Get One  ${modelName}
      @Access : Pubic
 */
 router.get('/:id', getOne)
 
-/* ! @Route  : POST => api/item
-     Desc    : Create Item
+/* ! @Route  : POST => api/${modelName}
+     Desc    : Create ${modelName}
      @Access : Pubic
 */
 
-router.post('/additem', addItem)
+router.post('/add${modelName}', add${modelName})
 
-/* ! @Route  : POST => api/item/id
-     Desc    : Delete One Item
+/* ! @Route  : POST => api/${modelName}/id
+     Desc    : Delete One ${modelName}
      @Access : Pubic
 */
-router.delete('/:id', deletItem)
+router.delete('/:id', delet${modelName})
 
-/* ! @Route  : DELETE => api/item/
-     Desc    : Delete All items
+/* ! @Route  : DELETE => api/${modelName}/
+     Desc    : Delete All ${modelName}s
      @Access : Pubic
 */
-router.delete('/', deletAllItems)
+router.delete('/', deletAll${modelName}s)
 
-/* ! @Route  : UPDATE => api/item/:id
-     Desc    : UPDATE  item
+/* ! @Route  : UPDATE => api/${modelName}/:id
+     Desc    : UPDATE  ${modelName}
      @Access : Pubic
 */
-router.put('/:id', updateItem)
+router.put('/:id', update${modelName})
 
 
 
