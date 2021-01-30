@@ -1,6 +1,6 @@
 {
   "name": "@ucef/mernpack",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "mern squelette application",
   "main": "server.js",
   "scripts": {
