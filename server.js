@@ -1,6 +1,6 @@
 const {createApp} = require('./server/squelette')
 
-createApp.ServerCreate(Item);
+createApp.ServerCreate("Item");
 
 
 
