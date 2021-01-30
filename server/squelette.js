@@ -1,10 +1,10 @@
 const fs = require('fs');
-const  server  = require('./files/server');
-const  validations  = require('./files/validations')
-const  routes  = require('./files/routes')
-const  controllers  = require('./files/controllers')
-const  model  = require('./files/model')
-const  env  = require('./files/.env')
+const  {server}  = require('./files/server');
+const  {validations}  = require('./files/validations')
+const  {routes}  = require('./files/routes')
+const  {controllers}  = require('./files/controllers')
+const  {model}  = require('./files/model')
+const  {env}  = require('./files/.env')
 const stepBack = "../../../";
 
 
