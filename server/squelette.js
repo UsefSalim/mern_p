@@ -7,14 +7,16 @@ const  {model}  = require('./files/model')
 const  {env}  = require('./files/.env')
 const stepBack = "../../../";
 
-
-exports.ServerCreate = () => {
-
-  fs.mkdir(`${stepBack}/controllers`, function () {
-    fs.appendFile(`${stepBack}/controllers/Item.controllers.js`, controllers(), function (err) {
+createController = (modelName)=>{
+ fs.mkdir(`${stepBack}/controllers`, function () {
+    fs.appendFile(`${stepBack}/controllers/${modelName}.controllers.js`, controllers(modelName), function (err) {
       if (err) throw err;
     });
   })
+}
+ServerCreate = (modelName) => {
+
+ createController(modelName)
   fs.mkdir(`${stepBack}/models`, function () {
     fs.appendFile(`${stepBack}/models/Item.model.js`, model(), function (err) {
       if (err) throw err;
@@ -39,3 +41,5 @@ exports.ServerCreate = () => {
     if (err) throw err;
   })
 }
+
+export default {ServerCreate,createController}
