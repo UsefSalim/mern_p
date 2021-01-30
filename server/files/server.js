@@ -22,7 +22,7 @@ mongoose
     useUnifiedTopology: true
   })
   .then(() => console.log("Mongo Db Connected"))
-  .catch(err => console.log(\`error connection to the DB : ${err}\`))
+  .catch(err => console.log("error connection to the DB : " + err))
 
 //* -------------------------------------Use Routes 
 
@@ -30,5 +30,5 @@ app.use('/api/todos', itemRoutes)
 
 //* ---- ---------------------------------Port APP
 const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(\`app Listning on Port : localhost:${PORT}\`))`
+app.listen(PORT, () => console.log("app Listning on Port : localhost:"+PORT))`
 }

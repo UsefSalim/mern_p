@@ -28,7 +28,7 @@ exports.getAll = async (req, res) => {
 */
 exports.getOne = async (req, res) => {
   !ObjectID.isValid(req.params.id)
-    && res.status(404).json({ message: \`l'ID ${req.params.id} n'est pas reconnu\` })
+    && res.status(404).json({ message: "l'ID " +req.params.id"+ n'est pas reconnu" })
   Item.findById(req.params.id, (err, info) => {
     !err
       ? res.status(200).json(info)
@@ -58,10 +58,10 @@ exports.addItem = async (req, res) => {
 */
 exports.deletItem = async (req, res) => {
   if (!ObjectID.isValid(req.params.id))
-    res.status(400).json({ message: \`l'ID ${req.params.id} n'est pas reconnu\` })
+    res.status(400).json({ message: "l'ID " +req.params.id+ " n'est pas reconnu" })
   try {
    await Item.remove({_id:req.params.id}).exec()
-   res.status(200).json({message: \`l'item avec l'id ${req.params.id} est supprimer avec succées\`})
+   res.status(200).json({message: "l'item avec l'id "+req.params.id+" est supprimer avec succées"})
   } catch (error) {
     res.status(500).json({ error })
   }
@@ -86,7 +86,7 @@ exports.deletAllItems = async (req, res) => {
 
 exports.updateItem = async (req, res) => {
   !ObjectID.isValid(req.params.id)
-    && res.status(404).json({ message: \`l'ID ${req.params.id} n'est pas reconnu\` })
+    && res.status(404).json({ message: "l'ID "+req.params.id+" n'est pas reconnu" })
   const { error } = itemValidation(req.body)
   error
     && res.status(400).json(error.details[0].message)
