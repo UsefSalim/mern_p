@@ -1,7 +1,6 @@
-const fs = require('fs');
 
-const {createController,createModel,createRoute,createValidation} = require('./creations')
-const stepBack = "../../../";
+
+const {createServer,createConfig,createController,createModel,createRoute,createValidation} = require('./creations')
 
 exports.ServerCreate = (modelName) => {
 
@@ -13,13 +12,8 @@ exports.ServerCreate = (modelName) => {
 
   createValidation(modelName)
 
-  fs.mkdir(`${stepBack}/config`, function () {
-    fs.appendFile(`${stepBack}/config/.env`, env(), function (err) {
-      if (err) throw err;
-    });
-  })
-  fs.appendFile(`${stepBack}/server.js`, server(), function (err) {
-    if (err) throw err;
-  })
+createConfig()
+createServer()
+ 
 }
 

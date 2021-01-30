@@ -37,3 +37,15 @@ exports.createValidation = (modelName)=>{
     });
   })
 }
+exports.createConfig = ()=>{
+    fs.mkdir(`${stepBack}/config`, function () {
+    fs.appendFile(`${stepBack}/config/.env`, env(), function (err) {
+      if (err) throw err;
+    });
+  })
+}
+exports.createServer = ()=>{
+   fs.appendFile(`${stepBack}/server.js`, server(), function (err) {
+    if (err) throw err;
+  })
+}
