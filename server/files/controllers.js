@@ -28,7 +28,7 @@ exports.getAll = async (req, res) => {
 */
 exports.getOne = async (req, res) => {
   !ObjectID.isValid(req.params.id)
-    && res.status(404).json({ message: "l'ID " +req.params.id"+ n'est pas reconnu" })
+    && res.status(404).json({ message: "l'ID " +req.params.id+ " n'est pas reconnu" })
   Item.findById(req.params.id, (err, info) => {
     !err
       ? res.status(200).json(info)

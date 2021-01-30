@@ -16,7 +16,7 @@ exports.ServerCreate = () => {
     });
   })
   fs.mkdir(`${stepBack}/models`, function () {
-    fs.appendFile(`${stepBack}/models/Items.model.js`, model(), function (err) {
+    fs.appendFile(`${stepBack}/models/Item.model.js`, model(), function (err) {
       if (err) throw err;
     });
   })
