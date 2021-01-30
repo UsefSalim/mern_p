@@ -1,4 +1,4 @@
-const {createApp} = require('./server/squelette')
+const createApp = require('./server/squelette')
 
 createApp.ServerCreate("Item");
 
