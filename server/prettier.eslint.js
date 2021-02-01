@@ -3,7 +3,7 @@ const { eslint, gitignore, vsCodeConfig, prettier } = require('./creations/eslin
 
 
 
-exports.configPrettierEslint(){
+exports.configPrettierEslint = () => {
   eslint()
   gitignore()
   vsCodeConfig()
