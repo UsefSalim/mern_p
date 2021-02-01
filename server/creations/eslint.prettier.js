@@ -1,4 +1,3 @@
-const stepBack = "../../../";
 const fs = require('fs');
 exports.vsCodeConfig = () => {
   fs.mkdir(`./.vscode`, function () {
