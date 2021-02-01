@@ -82,13 +82,4 @@ exports.eslint = () => {
       if (err) throw err;
     });
 }
-exports.gitignore = () => {
-  fs.appendFile(`./.gitignore`,
-    `/node_modules
-    .prettier
-    .eslintrc.json`
-    ,
-    function (err) {
-      if (err) throw err;
-    });
-}
+
