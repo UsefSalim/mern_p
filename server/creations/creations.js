@@ -42,20 +42,20 @@ exports.createConfig = () => {
     fs.appendFile(`${stepBack}/config/.env`, env(), function (err) {
       if (err) throw err;
     });
-    fs.appendFile(`${stepBack}/config/configurations.js`,
-      `const path = '@ucef/mernpack/server'
-          const prettierEslint = require(path+'/prettier.eslint')
-          const create = require(path+'/createcrud')
+    // fs.appendFile(`${stepBack}/config/configurations.js`,
+    //   `const path = '@ucef/mernpack/server'
+    //       const prettierEslint = require(path+'/prettier.eslint')
+    //       const create = require(path+'/createcrud')
 
-          // prettierEslint.configPrettierEslint()
-          // create.createCrud("User")
-          // create.createNewController("Test")
-          // create.createNewModel("Test")
-          // create.createNewRoute("Test")
-          // create.createNewValidation("Test")`,
-      function (err) {
-        if (err) throw err;
-      });
+    //       // prettierEslint.configPrettierEslint()
+    //       // create.createCrud("User")
+    //       // create.createNewController("Test")
+    //       // create.createNewModel("Test")
+    //       // create.createNewRoute("Test")
+    //       // create.createNewValidation("Test")`,
+    //   function (err) {
+    //     if (err) throw err;
+    //   });
   })
 }
 exports.createServer = () => {
