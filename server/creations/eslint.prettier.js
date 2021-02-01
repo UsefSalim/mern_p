@@ -1,7 +1,7 @@
 const fs = require('fs');
 exports.vsCodeConfig = () => {
   fs.mkdir(`./.vscode`, function () {
-    fs.appendFile(`${stepBack}/.vscode/settings.json`,
+    fs.appendFile(`./.vscode/settings.json`,
       `{
         "editor.formatOnSave": true,
         "editor.tabSize": 2,

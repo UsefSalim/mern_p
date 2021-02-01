@@ -1,5 +1,5 @@
 const { createServer, createConfig, createController, createModel, createRoute, createValidation } = require('./creations/creations')
-// const { eslint, gitignore, vsCodeConfig, prettier } = require('./creations/eslint.prettier')
+
 
 exports.ServerCreate = (modelName) => {
 
