@@ -44,8 +44,8 @@ exports.createConfig = () => {
     });
     fs.appendFile(`${stepBack}/config/configurations.js`,
       `const path = '@ucef/mernpack/server'
-          const prettierEslint = require(`${ path } / prettier.eslint`)
-          const create = require(`${ path } / createcrud`)
+          const prettierEslint = require(path+'/prettier.eslint')
+          const create = require(path+'/createcrud')
 
           // prettierEslint.configPrettierEslint()
           // create.createCrud("User")
