@@ -30,5 +30,5 @@ app.use('/api/todos', itemRoutes);
 
 //* ---- ---------------------------------Port APP
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log('app Listning on Port: localhost:+PORT ));`
+app.listen(PORT, () => console.log('app Listning on Port: localhost:'+PORT ));`
 }
