@@ -1,25 +1,26 @@
-exports.model = (modelName)=>{
+exports.model = (modelName) => {
   return `const mongoose = require('mongoose');
-const Schema = mongoose.Schema
+
+const { Schema } = mongoose;
 //* create a ${modelName} Scheme
 const ${modelName}Schema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   validation: {
     type: Boolean,
-    default: false
+    default: false,
   },
   date: {
     type: Date,
-    default: Date.now
-  }
-})
-
-module.exports = ${modelName} = mongoose.model('${modelName}', ${modelName}Schema)`
+    default: Date.now,
+  },
+});
+const ${modelName} = mongoose.model('${modelName}', ${modelName}Schema);
+module.exports = ${modelName};`
 }

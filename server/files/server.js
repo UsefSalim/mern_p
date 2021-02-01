@@ -1,34 +1,34 @@
-exports.server = ()=>{
-  return `require("dotenv").config({ path: "./config/.env" })
+exports.server = () => {
+  return `require('dotenv').config({ path: './config/.env' });
 
-const express = require("express")
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
-const itemRoutes = require('./routes/Item.routes')
+const itemRoutes = require('./routes/Item.routes');
 
-const app = express()
+const app = express();
 
 //* ------------------------------------ BODY PARSER MIDDLEWEAR
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-//*------------------------------------ Db CONNECT
+//* ------------------------------------ Db CONNECT
 
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     // seUnifiedTopology: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
-  .then(() => console.log("Mongo Db Connected"))
-  .catch(err => console.log("error connection to the DB : " + err))
+  .then(() => console.log('Mongo Db Connected'))
+  .catch((err) => console.log('error connection to the DB : ' + err  ));
 
-//* -------------------------------------Use Routes 
+//* -------------------------------------Use Routes
 
-app.use('/api/todos', itemRoutes)
+app.use('/api/todos', itemRoutes);
 
 //* ---- ---------------------------------Port APP
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log("app Listning on Port : localhost:"+PORT))`
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log('app Listning on Port: localhost:+PORT ));`
 }
