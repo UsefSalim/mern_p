@@ -1,4 +1,5 @@
-const { createController, createModel, createRoute, createValidation } = require('../creations/creations')
+const { createController, createModel, createRoute, createValidation } = require('../creations/newCrud')
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -6,15 +7,15 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('What do you think of Node.js? ', async (answer) => {
-  modelName = await answer
+
+rl.question(`Nom du model `, (answer) => {
+  createController(answer)
+  createModel(answer)
+  createRoute(answer)
+  createValidation(answer)
   rl.close();
 })
-exports.createCrud = (modelName) => {
-  createController(modelName)
-  createModel(modelName)
-  createRoute(modelName)
-  createValidation(modelName)
-}
+
+
 
 

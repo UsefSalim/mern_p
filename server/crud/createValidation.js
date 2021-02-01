@@ -1,5 +1,15 @@
 const { createValidation } = require('../creations/creations')
 
-exports.createNewValidation = (modelName) => {
-  createValidation(modelName)
-}
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+
+rl.question(`Validations Name Uppercase 
+Ex : User => User.validation.js`, (answer) => {
+  createValidation(answer)
+  rl.close();
+})
