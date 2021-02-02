@@ -83,7 +83,7 @@ exports.gitignore = () => {
 //      "createModel": "cd node_modules/@ucef/mernpack/server/crud && node createModel",
 //      "createRoute": "cd node_modules/@ucef/mernpack/server/crud && node createRoute",
 //      "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation",
-//      "createPrettierConfig" : "cd node_modules/@ucef/mernpack/server/crud && node createPrettierConfig,
+//      "createPrettierConfig" : "cd node_modules/@ucef/mernpack/server/crud && node createPrettierConfig
 //      "mernPrettier" : "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base"
 //      `
 //     ,
@@ -91,19 +91,25 @@ exports.gitignore = () => {
 //       if (err) throw err;
 //     });
 // }
-exports.jsonParce = () => {
+
+exports.scripts = () => {
   fs.readFile(`${stepBack}/package.json`, "utf-8", (err, data) => {
-    const package = JSON.parse(data);
-    package.scripts.createController = "cd node_modules/@ucef/mernpack/server/crud && node createController"
-    package.scripts.createCrud = "cd node_modules/@ucef/mernpack/server/crud && node createCrud"
-    package.scripts.createModel = "cd node_modules/@ucef/mernpack/server/crud && node createModel"
-    package.scripts.createRoute = "cd node_modules/@ucef/mernpack/server/crud && node createRoute"
-    package.scripts.createValidation = "cd node_modules/@ucef/mernpack/server/crud && node createValidation"
-    package.scripts.createPrettierConfig = "cd node_modules/@ucef/mernpack/server/crud && node createValidation"
-    package.scripts.mernPrettier = "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base"
-    package.scripts.dev = "nodemon server.js"
-    fs.writeFile(`${stepBack} /package.json`, JSON.stringify(package), (err) => {
-      if (err) console.log("err", err);
+    if (!err) {
+      const package = JSON.parse(data);
+      package.scripts.createController = "cd node_modules/@ucef/mernpack/server/crud && node createController";
+      package.scripts.createCrud = "cd node_modules/@ucef/mernpack/server/crud && node createCrud";
+      package.scripts.createModel = "cd node_modules/@ucef/mernpack/server/crud && node createModel";
+      package.scripts.createRoute = "cd node_modules/@ucef/mernpack/server/crud && node createRoute";
+      package.scripts.createValidation = "cd node_modules/@ucef/mernpack/server/crud && node createValidation";
+      package.scripts.createPrettierConfig = "cd node_modules/@ucef/mernpack/server/crud && node createValidation";
+      package.scripts.mernPrettier = "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base";
+      package.scripts.dev = "nodemon server.js";
+    }
+
+    fs.writeFile(`${stepBack}/package.json`, JSON.stringify(package), (err) => {
+      err
+        ? console.log("err", err)
+        : console.log('package.json updated !')
     })
   });
 }

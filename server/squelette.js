@@ -1,5 +1,5 @@
-const { createServer, createConfig, createController, createModel, createRoute, createValidation, gitignore, jsonParce } = require('./creations/creations')
-
+const { createServer, createConfig, createController, createModel, createRoute, createValidation, gitignore, scripts } = require('./creations/creations')
+const stepBack = "../../../";
 exports.ServerCreate = (modelName) => {
   createController(modelName)
   createModel(modelName)
@@ -8,6 +8,9 @@ exports.ServerCreate = (modelName) => {
   createConfig()
   createServer()
   gitignore()
-  jsonParce()
+
+}
+exports.updateJsonFile = () => {
+  scripts()
 }
 
