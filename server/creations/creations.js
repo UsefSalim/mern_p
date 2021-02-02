@@ -75,8 +75,17 @@ exports.gitignore = () => {
     });
 }
 exports.readme = () => {
-  fs.appendFile(`./README.md`,
-    `/mern pack `
+  fs.appendFile(`./mernp.README.md`,
+    `/mern pack 
+    scripts creation :
+     "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController"
+     "createCrud": "cd node_modules/@ucef/mernpack/server/crud && node createCrud"
+     "createModel": "cd node_modules/@ucef/mernpack/server/crud && node createModel"
+     "createRoute": "cd node_modules/@ucef/mernpack/server/crud && node createRoute"
+     "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation"
+     Activation prettier and eslint :
+     "mernPrettier" : "npm i prettier eslint"
+     `
     ,
     function (err) {
       if (err) throw err;

@@ -13,4 +13,3 @@ Ex : User => User.controller.js`, (answer) => {
   createController(answer)
   rl.close();
 })
-v
