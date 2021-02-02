@@ -94,8 +94,8 @@ exports.gitignore = () => {
 
 exports.scripts = () => {
   fs.readFile(`${stepBack}/package.json`, "utf-8", (err, data) => {
+    let package = JSON.parse(data);
     if (!err) {
-      let package = JSON.parse(data);
       package.scripts.createController = "cd node_modules/@ucef/mernpack/server/crud && node createController";
       package.scripts.createCrud = "cd node_modules/@ucef/mernpack/server/crud && node createCrud";
       package.scripts.createModel = "cd node_modules/@ucef/mernpack/server/crud && node createModel";
@@ -105,7 +105,6 @@ exports.scripts = () => {
       package.scripts.mernPrettier = "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base";
       package.scripts.dev = "nodemon server.js";
     }
-
     fs.writeFile(`./package.json`, JSON.stringify(package), (err) => {
       err
         ? console.log("err", err)
