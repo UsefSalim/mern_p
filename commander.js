@@ -7,22 +7,22 @@ program
   .version('1.0.0')
   .description('test')
 program
-  .command('createCrud <modelName>')
+  .command('createController <modelName>')
   .alias('crud')
   .description('Crud created succesfuly')
   .action((modelName) => {
-    createController(modelName)
-    createModel(modelName)
-    createRoute(modelName)
-    createValidation(modelName)
+    fs.appendFile(`./${modelName}.controllers.js`, controllers(modelName), function (err) {
+      if (err) throw err;
+      else console.log(`${modelName}controller created`)
+    });
   })
-program
-  .command('createController <modelName>')
-  .alias('cc')
-  .description('Crud created succesfuly')
-  .action((modelName) => {
-    console.log(`created ${modelName}`)
-  })
+// program
+//   .command('createController <modelName>')
+//   .alias('cc')
+//   .description('Crud created succesfuly')
+//   .action((modelName) => {
+//     console.log(`created ${modelName}`)
+//   })
 
 
 program.parse(process.args)
