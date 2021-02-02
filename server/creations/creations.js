@@ -65,7 +65,7 @@ exports.createServer = () => {
 }
 
 exports.gitignore = () => {
-  fs.appendFile(`./.gitignore`,
+  fs.appendFile(`${stepBack}/.gitignore`,
     `/node_modules
     .prettier
     .eslintrc.json`
@@ -75,7 +75,7 @@ exports.gitignore = () => {
     });
 }
 exports.readme = () => {
-  fs.appendFile(`./mernp.README.md`,
+  fs.appendFile(`${stepBack}/mernp.README.md`,
     `/mern pack 
     scripts creation :
      "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController",
