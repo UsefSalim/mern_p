@@ -1,7 +1,7 @@
 const fs = require('fs');
 const stepBack = "../../../../../";
 exports.vsCodeConfig = () => {
-  fs.mkdir(`./.vscode`, function () {
+  fs.mkdir(`${stepBack}/.vscode`, function () {
     fs.appendFile(`${stepBack}/.vscode/settings.json`,
       `{
         "editor.formatOnSave": true,
