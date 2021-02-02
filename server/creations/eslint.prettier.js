@@ -1,7 +1,8 @@
 const fs = require('fs');
+const stepBack = "../../../../../";
 exports.vsCodeConfig = () => {
   fs.mkdir(`./.vscode`, function () {
-    fs.appendFile(`./.vscode/settings.json`,
+    fs.appendFile(`${stepBack}/.vscode/settings.json`,
       `{
         "editor.formatOnSave": true,
         "editor.tabSize": 2,
@@ -19,7 +20,7 @@ exports.vsCodeConfig = () => {
 }
 
 exports.prettier = () => {
-  fs.appendFile(`./.prettierrc`,
+  fs.appendFile(`${stepBack}/.prettierrc`,
     `{
       "printWidth": 80,
       "tabWidth": 2,
@@ -35,7 +36,7 @@ exports.prettier = () => {
     });
 }
 exports.eslint = () => {
-  fs.appendFile(`./.eslintrc.json`,
+  fs.appendFile(`${stepBack}/.eslintrc.json`,
     ` {
       "env": {
         "browser": true,
