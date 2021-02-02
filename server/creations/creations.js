@@ -74,21 +74,20 @@ exports.gitignore = () => {
       if (err) throw err;
     });
 }
-exports.readme = () => {
-  fs.appendFile(`${stepBack}/mernp.README.md`,
-    `/mern pack 
-    scripts creation :
-     "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController",
-     "createCrud": "cd node_modules/@ucef/mernpack/server/crud && node createCrud",
-     "createModel": "cd node_modules/@ucef/mernpack/server/crud && node createModel",
-     "createRoute": "cd node_modules/@ucef/mernpack/server/crud && node createRoute",
-     "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation",
-     "createPrettierConfig" : "cd node_modules/@ucef/mernpack/server/crud && node createPrettierConfig"
-     Activation prettier and eslint :
-     "mernPrettier" : "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base"
-     `
-    ,
-    function (err) {
-      if (err) throw err;
-    });
-}
+// exports.readme = () => {
+//   fs.appendFile(`${stepBack}/mernp.README.md`,
+//     `/mern pack 
+//     scripts creation :
+//      "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController",
+//      "createCrud": "cd node_modules/@ucef/mernpack/server/crud && node createCrud",
+//      "createModel": "cd node_modules/@ucef/mernpack/server/crud && node createModel",
+//      "createRoute": "cd node_modules/@ucef/mernpack/server/crud && node createRoute",
+//      "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation",
+//      "createPrettierConfig" : "cd node_modules/@ucef/mernpack/server/crud && node createPrettierConfig,
+//      "mernPrettier" : "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base"
+//      `
+//     ,
+//     function (err) {
+//       if (err) throw err;
+//     });
+// }
