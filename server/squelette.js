@@ -1,4 +1,4 @@
-const { createServer, createConfig, createController, createModel, createRoute, createValidation, gitignore } = require('./creations/creations')
+const { createServer, createConfig, createController, createModel, createRoute, createValidation, gitignore, readme } = require('./creations/creations')
 
 exports.ServerCreate = (modelName) => {
   createController(modelName)
@@ -8,5 +8,6 @@ exports.ServerCreate = (modelName) => {
   createConfig()
   createServer()
   gitignore()
+  readme()
 }
 

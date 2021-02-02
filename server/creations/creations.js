@@ -78,11 +78,12 @@ exports.readme = () => {
   fs.appendFile(`./mernp.README.md`,
     `/mern pack 
     scripts creation :
-     "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController"
-     "createCrud": "cd node_modules/@ucef/mernpack/server/crud && node createCrud"
-     "createModel": "cd node_modules/@ucef/mernpack/server/crud && node createModel"
-     "createRoute": "cd node_modules/@ucef/mernpack/server/crud && node createRoute"
-     "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation"
+     "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController",
+     "createCrud": "cd node_modules/@ucef/mernpack/server/crud && node createCrud",
+     "createModel": "cd node_modules/@ucef/mernpack/server/crud && node createModel",
+     "createRoute": "cd node_modules/@ucef/mernpack/server/crud && node createRoute",
+     "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation",
+     "createPrettierConfig" : "cd node_modules/@ucef/mernpack/server/crud && node createPrettierConfig"
      Activation prettier and eslint :
      "mernPrettier" : "npm i prettier eslint"
      `
