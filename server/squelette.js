@@ -5,9 +5,9 @@ exports.ServerCreate = (modelName) => {
   createModel(modelName)
   createRoute(modelName)
   createValidation(modelName)
-  createConfig()
-  createServer()
-  gitignore()
+  // createConfig()
+  // createServer()
+  // gitignore()
 
 }
 // exports.updateJsonFile = () => {
