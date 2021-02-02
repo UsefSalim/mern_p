@@ -1,4 +1,4 @@
-const { createValidation } = require('../creations/creations')
+const { createValidation } = require('../creations/newCrud')
 
 const readline = require('readline');
 

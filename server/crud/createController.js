@@ -1,4 +1,4 @@
-const { createController } = require('../creations/creations')
+const { createController } = require('../creations/newCrud')
 
 const readline = require('readline');
 

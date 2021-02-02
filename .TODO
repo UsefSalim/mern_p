@@ -14,5 +14,10 @@ readfile depuit la console nom du module  + type de manipulation
 
 
 
+ "createController": "cd node_modules/@ucef/mernpack/server/crud && node createController"
+  },
+
+
+
 
 
