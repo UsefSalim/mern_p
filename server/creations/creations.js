@@ -85,7 +85,7 @@ exports.readme = () => {
      "createValidation": "cd node_modules/@ucef/mernpack/server/crud && node createValidation",
      "createPrettierConfig" : "cd node_modules/@ucef/mernpack/server/crud && node createPrettierConfig"
      Activation prettier and eslint :
-     "mernPrettier" : "npm i prettier eslint"
+     "mernPrettier" : "npm i prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-config-airbnb-base"
      `
     ,
     function (err) {
